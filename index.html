@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Universe | Secondary School</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  background: #090f29;
+  color: white;
+}
+header {
+  text-align: center;
+  padding: 55px 20px 45px;
+  background: radial-gradient(circle at top, #353f94, #090f29);
+  position: relative;
+  overflow: hidden;
+}
+header h1 {
+  font-size: clamp(45px, 8vw, 90px);
+  margin: 10px 0;
+  background: linear-gradient(90deg,#35e9ff,#ffde59,#ff68bd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.subtitle {
+  font-size: 21px;
+  color: #cbd5ff;
+}
+.symbols {
+  font-size: 35px;
+  letter-spacing: 20px;
+  color: #ffde59;
+  animation: float 3s ease-in-out infinite alternate;
+}
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+.poster {
+  max-width: 1150px;
+  margin: auto;
+  padding: 25px;
+}
+.intro {
+  text-align: center;
+  font-size: 22px;
+  margin: 25px 0 35px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  border-radius: 22px;
+  padding: 25px;
+  min-height: 245px;
+  transition: transform .3s, box-shadow .3s;
+  border: 2px solid #ffffff30;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px #0007;
+}
+.card h2 {
+  font-size: 27px;
+  margin: 0 0 15px;
+}
+.card p {
+  line-height: 1.6;
+}
+.formula {
+  background: #00000030;
+  padding: 13px;
+  border-radius: 12px;
+  font-size: 21px;
+  text-align: center;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.pink { background: linear-gradient(135deg,#e73c90,#9a2ed4); }
+.blue { background: linear-gradient(135deg,#1879dd,#1644a2); }
+.green { background: linear-gradient(135deg,#008e87,#05615d); }
+.orange { background: linear-gradient(135deg,#e77b24,#ba3c40); }
+.purple { background: linear-gradient(135deg,#7454df,#42308e); }
+.teal { background: linear-gradient(135deg,#1586a7,#10567e); }
+.quiz {
+  margin-top: 35px;
+  padding: 35px;
+  text-align: center;
+  background: #1b2453;
+  border: 2px solid #6878cb;
+  border-radius: 25px;
+}
+.quiz h2 {
+  color: #ffde59;
+  font-size: 34px;
+}
+#question {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+.answers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+button {
+  padding: 13px 22px;
+  border: 0;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ffde59;
+  color: #142047;
+  transition: .2s;
+}
+button:hover {
+  background: #35e9ff;
+  transform: scale(1.05);
+}
+#feedback {
+  min-height: 30px;
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #cbd5ff;
+}
+@media(max-width:850px) {
+  .grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:550px) {
+  .grid { grid-template-columns: 1fr; }
+  .symbols { letter-spacing: 5px; }
+}
+@media print {
+  body { background: white; }
+  header { padding: 20px; }
+  .poster { padding: 10px; }
+  .grid { grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .card { min-height: 190px; padding: 14px; print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; }
+  .card h2 { font-size: 20px; }
+  .card p { font-size: 13px; }
+  .formula { font-size: 16px; }
+  header, .quiz { print-color-adjust: exact;
+    -webkit-print-color-adjust: exact; }
+  .quiz, .controls { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="symbols">π ∑ √ ∞ ÷ ×</div>
+  <h1>MATHS UNIVERSE</h1>
+  <p class="subtitle">Explore • Discover • Solve • Succeed</p>
+  <p>SECONDARY SCHOOL MATHEMATICS</p>
+</header>
+
+<main class="poster">
+  <p class="intro">
+    🚀 Unlock your potential — every problem has a solution!
+  </p>
+
+  <section class="grid">
+    <article class="card pink">
+      <h2>🔢 ALGEBRA</h2>
+      <p>Use letters to represent unknown numbers.</p>
+      <div class="formula">3x + 5 = 20</div>
+      <p>Subtract 5: 3x = 15<br>Divide by 3: <b>x = 5</b></p>
+    </article>
+
+    <article class="card blue">
+      <h2>📐 GEOMETRY</h2>
+      <p>Discover shapes, angles and measurements.</p>
+      <div class="formula">a² + b² = c²</div>
+      <p>Pythagoras' theorem applies to right-angled triangles.</p>
+    </article>
+
+    <article class="card green">
+      <h2>📊 STATISTICS</h2>
+      <p>Collect, organise and interpret data.</p>
+      <div class="formula">Mean = Sum ÷ Count</div>
+      <p>Example: 4, 6, 8<br>Mean = 18 ÷ 3 = <b>6</b></p>
+    </article>
+
+    <article class="card orange">
+      <h2>💯 PERCENTAGES</h2>
+      <p>Percent means "out of 100".</p>
+      <div class="formula">20% of 150 = 30</div>
+      <p>Calculate: 150 × 0.20 = <b>30</b></p>
+    </article>
+
+    <article class="card purple">
+      <h2>🎲 PROBABILITY</h2>
+      <p>Measure how likely an event is.</p>
+      <div class="formula">P(E) = Favourable ÷ Total</div>
+      <p>Rolling a 6 on a fair die:<br><b>P(6) = 1/6</b></p>
+    </article>
+
+    <article class="card teal">
+      <h2>📈 COORDINATES</h2>
+      <p>Explore straight lines and graphs.</p>
+      <div class="formula">y = mx + c</div>
+      <p>m = gradient (slope)<br>c = y-intercept</p>
+    </article>
+  </section>
+
+  <section class="quiz">
+    <h2>🧠 MATHS CHALLENGE!</h2>
+    <p>Can you solve these questions?</p>
+    <div id="question"></div>
+    <div id="answers" class="answers"></div>
+    <p id="feedback" aria-live="polite"></p>
+    <p id="score"></p>
+    <button onclick="nextQuestion()">Next Question →</button>
+  </section>
+
+  <div class="controls">
+    <button onclick="window.print()">🖨️ Print Poster</button>
+    <button onclick="changeTheme()">🎨 Change Background</button>
+  </div>
+</main>
+
+<footer>
+  ✨ MATHS IS EVERYWHERE — THINK BIG, AIM HIGH! ✨
+</footer>
+
+<script>
+const questions = [
+  {
+    q: "Solve: 3x + 5 = 20",
+    options: ["x = 3", "x = 5", "x = 7"],
+    answer: 1
+  },
+  {
+    q: "What is 25% of 200?",
+    options: ["25", "50", "75"],
+    answer: 1
+  },
+  {
+    q: "What is the mean of 2, 4, 6?",
+    options: ["4", "6", "12"],
+    answer: 0
+  },
+  {
+    q: "What is the area of a rectangle 8 cm by 5 cm?",
+    options: ["13 cm²", "26 cm²", "40 cm²"],
+    answer: 2
+  },
+  {
+    q: "What is the probability of heads on a fair coin?",
+    options: ["1/4", "1/2", "1"],
+    answer: 1
+  },
+  {
+    q: "What is 7²?",
+    options: ["14", "49", "77"],
+    answer: 1
+  }
+];
+
+let current = 0;
+let score = 0;
+let answered = false;
+
+function showQuestion() {
+  const item = questions[current];
+  document.getElementById("question").textContent = item.q;
+  document.getElementById("feedback").textContent = "";
+  document.getElementById("score").textContent =
+    "Question " + (current + 1) + " of " + questions.length +
+    " | Score: " + score;
+
+  const container = document.getElementById("answers");
+  container.innerHTML = "";
+  answered = false;
+
+  item.options.forEach((option, index) => {
+    const btn = document.createElement("button");
+    btn.textContent = option;
+    btn.onclick = () => checkAnswer(index);
+    container.appendChild(btn);
+  });
+}
+
+function checkAnswer(index) {
+  if (answered) return;
+  answered = true;
+
+  const correct = questions[current].answer;
+  const feedback = document.getElementById("feedback");
+
+  if (index === correct) {
+    score++;
+    feedback.textContent = "🎉 Brilliant! Correct answer!";
+    feedback.style.color = "#74ffba";
+  } else {
+    feedback.textContent =
+      "Keep trying! Correct answer: " +
+      questions[current].options[correct];
+    feedback.style.color = "#ffb5bd";
+  }
+
+  document.getElementById("score").textContent =
+    "Question " + (current + 1) + " of " +
+    questions.length + " | Score: " + score;
+}
+
+function nextQuestion() {
+  current++;
+  if (current >= questions.length) {
+    current = 0;
+    score = 0;
+  }
+  showQuestion();
+}
+
+const backgrounds = ["#090f29", "#172c3d", "#341c45", "#163c33"];
+let themeIndex = 0;
+
+function changeTheme() {
+  themeIndex = (themeIndex + 1) % backgrounds.length;
+  document.body.style.background = backgrounds[themeIndex];
+}
+
+showQuestion();
+</script>
+</body>
+</html>
